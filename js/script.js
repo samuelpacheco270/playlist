@@ -19,14 +19,15 @@ $(".button").click(function(){
      link,
  }
  save.push(obj);
-
+    
  $(".playlist").empty();
 save.forEach(function(info){
-    $(".playlist").append("<p>Artist: "+ info.artist +"</p>")
-    $(".playlist").append("<p>Song: "+ info.song +"</p>")
-    $(".playlist").append("<p>"+ info.duration +"</p>")
-    $(".playlist").append("<p>"+ info.photo +"</p>")
-    $(".playlist").append("<p>"+ info.link +"</p>")
+   //$(".playlist").append('<div class="record">'+"</div>"); 
+    $(".playlist").append('<p class="songInfo">Artist: '+ info.artist +"</p>")
+    $(".playlist").append('<p class ="songInfo">Song: '+ info.song +"</p>")
+    $(".playlist").append('<p class="songInfo">Duration: '+ info.duration +"</p>")
+    $(".playlist").append(`<p class="songInfo">AlbumCover:<img src="${info.photo}"> </p>`)
+    $(".playlist").append(`<p class="songInfo">SongLink:<a href="${info.link}">link</a></p>`)
 });
     //$(".playlist").text(artist+song)
 });
